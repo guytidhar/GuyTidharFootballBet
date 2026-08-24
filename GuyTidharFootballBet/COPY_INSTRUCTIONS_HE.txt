@@ -1,0 +1,12 @@
+﻿הוראות החלפה בטוחה:
+1. בצעו Commit ו-Push למצב הנוכחי.
+2. עצרו IIS Express וסגרו Visual Studio.
+3. גבו את תיקיית הפרויקט.
+4. אל תעתיקו ואל תמחקו את App_Data הקיים.
+5. העתיקו את כל תוכן חבילת source אל תיקיית האתר ב-Repository ואשרו Replace.
+6. פתחו את GuyTidharFootballBet.sln באמצעות Visual Studio 2022.
+7. ודאו שה-MDF הקיים עדיין נמצא ב-App_Data.
+8. Set As Start Page על Login.aspx והריצו Ctrl+F5.
+9. בדקו אורח, משתמש רגיל ומנהל.
+10. לאחר בדיקה: Commit All ואז Push.
+אין צורך להריץ SQL בגרסה זו.

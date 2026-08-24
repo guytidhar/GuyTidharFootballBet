@@ -1,17 +1,1 @@
-using System;
-public partial class Register : System.Web.UI.Page
-{
- public string st="";
- protected void Page_Load(object sender, EventArgs e)
- {
-  if(Page.IsPostBack)
-  {
-   string first=MyAdoHelper.FixText(Request.Form["firstName"]), last=MyAdoHelper.FixText(Request.Form["lastName"]), user=MyAdoHelper.FixText(Request.Form["userName"]), pass=MyAdoHelper.FixText(Request.Form["password"]), nick=MyAdoHelper.FixText(Request.Form["nickName"]);
-   if(first.Length<2 || last.Length<2 || user.Length<4 || pass.Length<4 || nick.Length<2){st="הנתונים לא תקינים";return;}
-   string check="SELECT * FROM Users WHERE UserName=N'"+user+"'";
-   if(MyAdoHelper.IsExist(check)){st="שם המשתמש כבר קיים במערכת";return;}
-   string sql="INSERT INTO Users (FirstName,LastName,UserName,Password,NickName,UserType,Coins) VALUES (N'"+first+"',N'"+last+"',N'"+user+"',N'"+pass+"',N'"+nick+"',N'User',1000)";
-   MyAdoHelper.DoQuery(sql); Response.Redirect("Login.aspx");
-  }
- }
-}
+﻿using System;public partial class Register:System.Web.UI.Page{public string st="";protected void Page_Load(object sender,EventArgs e){if(Page.IsPostBack){string f=MyAdoHelper.FixText(Request.Form["firstName"]),l=MyAdoHelper.FixText(Request.Form["lastName"]),u=MyAdoHelper.FixText(Request.Form["userName"]),p=MyAdoHelper.FixText(Request.Form["password"]),n=MyAdoHelper.FixText(Request.Form["nickName"]);if(f.Length<2||l.Length<2||u.Length<2||p.Length<2||n.Length<2){st="הנתונים אינם תקינים";return;}if(MyAdoHelper.IsExist("SELECT * FROM Users WHERE UserName=N'"+u+"'")){st="שם המשתמש כבר קיים במערכת";return;}MyAdoHelper.DoQuery("INSERT INTO Users(FirstName,LastName,UserName,Password,NickName,UserType,Coins) VALUES(N'"+f+"',N'"+l+"',N'"+u+"',N'"+p+"',N'"+n+"',N'User',1000)");Response.Redirect("Login.aspx");}}}

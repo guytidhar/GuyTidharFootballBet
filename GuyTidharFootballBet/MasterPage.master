@@ -1,39 +1,5 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
-<!DOCTYPE html>
-<html>
-<head runat="server">
-    <meta charset="utf-8" />
-    <title>ליגת הניחושים</title>
-    <link href="Site.css" rel="stylesheet" type="text/css" />
-    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
-</head>
-<body>
-<form id="masterForm" runat="server">
-    <div class="topPanel">
-        <span class="siteTitle">ליגת הניחושים</span>
-        <span class="userInfo"><%= TopUserText %></span>
-        <span class="leaguePicker">
-            <b>בחירת ליגה:</b>
-            <label><input type="radio" name="topLeague" value="England" checked="checked" /> 🇬🇧 אנגליה</label>
-            <label><input type="radio" name="topLeague" value="Spain" /> 🇪🇸 ספרד</label>
-        </span>
-        <div class="clear"></div>
-    </div>
-    <table class="pageLayout">
-        <tr>
-            <td class="sideMenu">
-                <a href="Home.aspx">דף הבית</a>
-                <a href="About.aspx">אודות</a>
-                <a href="Gallery.aspx">גלריה</a>
-                <a href="SearchGames.aspx">חיפוש משחקים</a>
-                <%= DynamicMenu %>
-            </td>
-            <td class="contentArea">
-                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
-            </td>
-        </tr>
-    </table>
-    <div class="footer">פרויקט גמר בתכנות אינטרנט | מטבעות וירטואליים בלבד</div>
-</form>
-</body>
-</html>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html><html><head runat="server"><meta charset="utf-8" /><title>ליגת הניחושים</title><link href="Site.css" rel="stylesheet" type="text/css" /><asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder></head>
+<body><form id="masterForm" runat="server"><div class="topPanel"><span class="siteTitle">ליגת הניחושים</span><span class="userInfo"><%= TopUserText %></span></div>
+<table class="pageLayout"><tr><td class="sideMenu"><a href="Home.aspx">דף הבית</a><a href="About.aspx">אודות</a><a href="Gallery.aspx">גלייריית הקבוצות המובילות</a><a href="Games.aspx">משחקים</a><%= DynamicMenu %></td><td class="contentArea"><asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder></td></tr></table>
+<div class="footer">פרויקט גמר בתכנות אינטרנט | מטבעות וירטואליים בלבד</div></form></body></html>
