@@ -1,0 +1,1 @@
+<%@ Page Title="ההימורים שלי" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MyBets.aspx.cs" Inherits="MyBets" %><asp:Content ID="c1" ContentPlaceHolderID="head" runat="server"></asp:Content><asp:Content ID="c2" ContentPlaceHolderID="MainContent" runat="server"><h1>ההימורים שלי</h1><%= betsHtml %></asp:Content>

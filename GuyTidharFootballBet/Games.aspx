@@ -1,0 +1,1 @@
+<%@ Page Title="משחקים" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Games.aspx.cs" Inherits="Games" %><asp:Content ID="c1" ContentPlaceHolderID="head" runat="server"></asp:Content><asp:Content ID="c2" ContentPlaceHolderID="MainContent" runat="server"><h1>כל המשחקים</h1><%= gamesHtml %></asp:Content>
